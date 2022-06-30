@@ -1,13 +1,31 @@
+#include "carrier_class.hpp"
 
-#include <iostream>
-#include <ctype.h>
-#include <string>
-#include <locale>
+// bool	Contact::set_inform(int index)
+// {
+// 	this->index = index;
+// 	for (int i = FirstName; i <= Secret; i++)
+// 	{
+// 		std::cout << this->index << std::endl;
+// 	}
+// }
 
-int
-	main(int argc, char const *argv[])
+
+
+int	main(void)
 {
+	// char buff[512];
+	Carrier	carrier;
+	std::string buff;
 
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	
+	while (1)
+	{
+		std::getline(std::cin, buff);
+		if (buff == "add")
+			carrier::add_void_contact()
+		// if (strcmp("search", buff) == 0)
+			// std::cout << "y" << std::endl;
+		if (strcmp("exit", buff) == 0)
+			exit(0);
+	}
+
 }

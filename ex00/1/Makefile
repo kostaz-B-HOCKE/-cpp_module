@@ -1,8 +1,9 @@
-NAME		= e01
+
+NAME		= start
 SRCS_DIR	= src/
 OBJS_DIR	= obj/
-INCS_DIR	= 
-SRCS_F		= main.cpp
+INCS_DIR	= src/
+SRCS_F		= main.cpp contact.cpp carrier.cpp
 
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_F))
 OBJS_F		= $(patsubst %.cpp, %.o, $(SRCS_F))
@@ -10,9 +11,8 @@ DEPS_F		= $(patsubst %.cpp, %.d, $(SRCS_F))
 OBJS		= $(addprefix $(OBJS_DIR), $(OBJS_F))
 DEPS		= $(addprefix $(OBJS_DIR), $(DEPS_F))
 
-CC			= g++
+CC			= clang++
 CFLAGS		= -Wall -Wextra -Werror -MMD
-
 
 all: $(NAME)
 
@@ -33,6 +33,6 @@ fclean : clean
 re: fclean all
 
 .PHONY:
-		all clean fclean re bonus
+		all clean fclean re 
 
 -include $(DEPS) $(DEPS_B)

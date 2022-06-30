@@ -1,7 +1,7 @@
-NAME		= e00
+NAME		= start
 SRCS_DIR	= src/
 OBJS_DIR	= obj/
-INCS_DIR	= 
+INCS_DIR	= include
 SRCS_F		= main.cpp
 
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_F))
@@ -10,7 +10,7 @@ DEPS_F		= $(patsubst %.cpp, %.d, $(SRCS_F))
 OBJS		= $(addprefix $(OBJS_DIR), $(OBJS_F))
 DEPS		= $(addprefix $(OBJS_DIR), $(DEPS_F))
 
-CC			= g++
+CC			= clang++
 CFLAGS		= -Wall -Wextra -Werror -MMD
 
 
